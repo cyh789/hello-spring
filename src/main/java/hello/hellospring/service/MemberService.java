@@ -2,7 +2,6 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,6 +42,9 @@ public class MemberService {
         return memberRepository.findAll();
     }
 
+    /**
+     * 특정 회원 조회
+     */
     public Optional<Member> findOne(Long MemberId) {
         return memberRepository.findById(MemberId);
     }
