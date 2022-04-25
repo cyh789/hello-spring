@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@Repository
+//@Repository
 public class JdbcTemplateMemberRepository implements MemberRepository {
     private final JdbcTemplate jdbcTemplate;
 
@@ -26,6 +26,8 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 
     @Override
     public Member save(Member member) {
+        System.out.println("[DEBUG] JdbcTemplateMemberRepository");
+
         SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
         jdbcInsert.withTableName("member").usingGeneratedKeyColumns("id");
 
