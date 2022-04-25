@@ -13,6 +13,8 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public Member save(Member member) {
+        System.out.println("[DEBUG] MemoryMemberRepository");
+
         member.setId(++sequence);
         store.put(member.getId(), member);
         return member;
