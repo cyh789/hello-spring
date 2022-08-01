@@ -1,16 +1,17 @@
-package toby31.springbook.chapter1.ch1_1.user;
+package toby31.springbook.chapter1.ch1_5.user;
 
-import toby31.springbook.chapter1.ch1_1.user.domain.User;
-import toby31.springbook.chapter1.ch1_1.user.dao.UserDao;
+import toby31.springbook.chapter1.ch1_5.user.dao.NConnectionMaker;
+import toby31.springbook.chapter1.ch1_5.user.dao.UserDao;
+import toby31.springbook.chapter1.ch1_5.user.domain.User;
 
 import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        UserDao dao = new UserDao();
+        UserDao dao = new UserDao(new NConnectionMaker());
 
         User user = new User();
-        user.setId("test1");
+        user.setId("test5 2");
         user.setName("테스트");
         user.setPassword("1234");
 

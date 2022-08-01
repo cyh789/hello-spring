@@ -1,16 +1,18 @@
-package toby31.springbook.chapter1.ch1_1.user;
+package toby31.springbook.chapter1.ch1_8.user;
 
-import toby31.springbook.chapter1.ch1_1.user.domain.User;
-import toby31.springbook.chapter1.ch1_1.user.dao.UserDao;
+import toby31.springbook.chapter1.ch1_8.user.dao.UserDao;
+import toby31.springbook.chapter1.ch1_8.user.domain.User;
 
 import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
+//        ApplicationContext ac = new AnnotationConfigApplicationContext(DaoFactory.class);
+//        UserDao dao = ac.getBean("userDao", UserDao.class);
         UserDao dao = new UserDao();
 
         User user = new User();
-        user.setId("test1");
+        user.setId("test8");
         user.setName("테스트");
         user.setPassword("1234");
 

@@ -1,7 +1,7 @@
-package toby31.springbook.chapter1.ch1_1.user;
+package toby31.springbook.chapter1.ch1_10.user;
 
-import toby31.springbook.chapter1.ch1_1.user.domain.User;
-import toby31.springbook.chapter1.ch1_1.user.dao.UserDao;
+import toby31.springbook.chapter1.ch1_10.user.dao.UserDao;
+import toby31.springbook.chapter1.ch1_10.user.domain.User;
 
 import java.sql.SQLException;
 
@@ -10,7 +10,7 @@ public class Main {
         UserDao dao = new UserDao();
 
         User user = new User();
-        user.setId("test1");
+        user.setId("test10");
         user.setName("테스트");
         user.setPassword("1234");
 

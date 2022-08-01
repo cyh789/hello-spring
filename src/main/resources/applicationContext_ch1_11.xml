@@ -10,9 +10,9 @@
 <!--        <property name="connectionMaker" ref="nConnectionMaker"/>-->
 <!--    </bean>-->
 
-    <bean id="nConnectionMaker" class="toby31.springbook.ch1_11.springbook.user.dao.NConnectionMaker"/>
+    <bean id="nConnectionMaker" class="toby31.springbook.chapter1.ch1_11.user.dao.NConnectionMaker"/>
 
-    <bean id="userDao" class="toby31.springbook.ch1_11.springbook.user.dao.UserDao">
+    <bean id="userDao" class="toby31.springbook.chapter1.ch1_11.user.dao.UserDao">
         <property name="connectionMaker" ref="nConnectionMaker"/>
     </bean>
 </beans>
